@@ -1,6 +1,6 @@
 NGINX_CONF_TEMPLATE_PATH=$(cd $(dirname $0); pwd)/../confs/nginx
 
-echo "NGINX_CONF_PATH?"
+echo "NGINX_CONF_PATH? (ex: /home/isucon/isuumo/confs/nginx)"
 read NGINX_CONF_PATH
 
 if [ ! -e $NGINX_CONF_TEMPLATE_PATH ]; then
