@@ -12,7 +12,7 @@ if [ -L /etc/systemd/system/$SYSTEMD_FILE ]; then
     echo "rm symbolic file /etc/systemd/system/$SYSTEMD_FILE"
     rm /etc/systemd/system/$SYSTEMD_FILE
 else
-    /etc/systemd/system/$SYSTEMD_FILE /etc/systemd/system/$SYSTEMD_FILE.bak
+    mv /etc/systemd/system/$SYSTEMD_FILE /etc/systemd/system/$SYSTEMD_FILE.bak
 fi
 
 ln -s $SYSTEMD_CONF_PATH/$SYSTEMD_FILE /etc/systemd/system/$SYSTEMD_FILE
